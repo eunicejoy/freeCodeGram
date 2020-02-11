@@ -24,7 +24,7 @@
     </div>
 
     <div class="row pt-5">
-        <div class="col-4 w-100"><img src="images/1.png" alt=""></div>
+        <div class="col-4 w-100"><img src="" alt=""></div>
         <div class="col-4 w-100"><img src="images/2.png" alt=""></div>
         <div class="col-4 w-100"><img src="images/3.png" alt=""></div>
     </div>
