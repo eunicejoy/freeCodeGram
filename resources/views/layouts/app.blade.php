@@ -39,7 +39,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto align-items-center">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -51,9 +51,12 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item ">
+                                <a href="/profile/{{ Auth::user()->id }}" class="text-dark">{{ Auth::user()->username }} </a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->username }} <span class="caret"></span>
+                                    <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

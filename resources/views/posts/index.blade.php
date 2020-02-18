@@ -2,6 +2,12 @@
 
 @section('content')
 <div class="container">
+
+    @if ($posts->count() == 0)
+        <div class="h1">
+            Welcome
+        </div>
+    @else
     @foreach ($posts as $post)
     {{-- <div class="row justify-content-center">
         <div class="d-flex align-items-center">
@@ -37,5 +43,7 @@
            {{ $posts->links()}}
         </div>
     </div>
+    @endif
+   
 </div>
 @endsection

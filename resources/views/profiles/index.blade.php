@@ -13,7 +13,13 @@
                     <div class="h4">
                         {{$user->username}}
                     </div>
-                    <follow-button user-id="{{$user->id}}" follows="{{$follows}}"></follow-button>
+                    @if (Auth::user()->id == $user->id)
+                        
+                    @else
+                        <follow-button user-id="{{$user->id}}" follows="{{$follows}}"></follow-button>
+                    @endif
+                    
+                    
                 </div>
                 @can('update', $user->profile)
                 <a href="/p/create">Add New Post</a>
