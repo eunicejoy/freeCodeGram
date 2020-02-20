@@ -53,7 +53,7 @@ class ProfileController extends Controller
             'title' => 'required',
             'description' => 'required',
             'url' => 'url',
-            'image' => '',
+            'image' => 'image',
         ]);
 
         if(request('image'))
