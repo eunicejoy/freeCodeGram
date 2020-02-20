@@ -24,3 +24,4 @@ Route::get('/p/create','PostController@create');
 Route::post('/p','PostController@store');
 Route::get('/p/{post}','PostController@show');
 
+Route::get('/search', 'HomeController@search');

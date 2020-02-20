@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Profile;
 
 class HomeController extends Controller
 {
@@ -25,5 +26,15 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+    
+    public function search(Request $request)
+    {
+        $search =  $request->input('search');
+
+        $results = User::where('username','LIKE', '%'.$search.'%')->get();
+   
+       return view('welcome',compact('results'));
+            
     }
 }

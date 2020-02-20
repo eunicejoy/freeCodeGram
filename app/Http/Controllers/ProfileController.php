@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Cache;
+use App\Profile;
 
 class ProfileController extends Controller
 {
@@ -73,4 +74,6 @@ class ProfileController extends Controller
 
         return redirect("/profile/{$user->id}");
     }
+
+
 }
